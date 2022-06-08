@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "Weisse Hochzeit",
+        "translations": [
+            {
+                "en_US": "White"
+            }
+        ],
+        "distance": 0,
+        "unit": "month"
+    },
+    {
+        "id": 2,
+        "name": "Traumhochzeit",
+        "translations": [],
+        "distance": 6,
+        "unit": "month"
+    },
+    {
+        "id": 3,
+        "name": "Bierhochzeit",
+        "translations": [],
+        "distance": 9,
+        "unit": "month"
+    },
+    {
+        "id": 4,
+        "name": "Papierhochzeit",
+        "translations": [],
+        "distance": 12,
+        "unit": "month"
+    },
+    {
+        "id": 5,
+        "name": "Baumwollhochzeit",
+        "translations": [],
+        "distance": 2,
+        "unit": "year"
+    },
+    {
+        "id": 6,
+        "name": "Lederhochzeit",
+        "translations": [],
+        "distance": 3,
+        "unit": "year"
+    }
+]

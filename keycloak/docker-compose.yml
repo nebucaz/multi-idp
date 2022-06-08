@@ -1,0 +1,25 @@
+version: '3.8'
+
+networks:
+  inet:
+
+services:
+  idp1:
+    container_name: idp1
+    image: "quay.io/keycloak/keycloak:18.0.0"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=passw0rd
+    ports:
+      - 9081:8080
+    command: start-dev
+  idp2:
+    container_name: idp2
+    image: "quay.io/keycloak/keycloak:18.0.0"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=passw0rd
+    ports:
+      - 9082:8080
+    command: start-dev
+#      docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:18.0.0 start-dev
