@@ -6,11 +6,11 @@ Frustrating, if you want to use TypeScript
 * 2 years ago https://github.com/Sean-Bradley/Seans-TypeScript-NodeJS-CRUD-REST-API-Boilerplate
 *
 
-## Dev
-Create express - App
-`https://expressjs.com/en/starter/generator.html`
+## Dev Node
+```
+cd portal
+npm run dev
+```
 
-
- "exclude": [
-    "node_modules"
-  ]
+## Resources
+* [node-openid-client](https://github.com/panva/node-openid-client)
