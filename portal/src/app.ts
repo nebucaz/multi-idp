@@ -1,14 +1,25 @@
 import express from 'express';
-//import { Issuer } from 'openid-client';
 import fourOhFour from './middleware/fourOhFour.js';
 import errorHandler from './middleware/errorHandler.js';
 import routes from './routes/index.js';
+import session from'express-session';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express()
 
 // Apply most middleware first
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+
+
+app.use(session({
+    secret: "jFDH94wDUrMVK7YxgGgSJw16zctlJIpI",
+    resave: true,
+    saveUninitialized: true
+}));
+
 /*
 app.use(cors({
     // @ts-ignore
@@ -25,7 +36,9 @@ app.use('/', root)
 app.use(routes)
 
 app.get('/', (req, res) => {
-  res.send('<html><head><title>Test</title></head><body><h1>Hello World!</h1><ul><li><a href="/sign">Sign a document</a></li></ul></body></html>');
+  res.send(`<html><head><title>Test</title></head><body><h1>Hello World!</h1>
+    <ul><li><a href="/sign">Sign a document</a></li>
+    <li><a href="/charge">Charge</a></li></ul></body></html>`);
 });
 
 // Apply error handling last
@@ -49,4 +62,17 @@ app.get('/auth', (req, res) => {
         // token_endpoint_auth_method (default "client_secret_basic")
       }); // => Client
 });
+*/
+
+/*
+Random stuff
+
+yDsMVHweIYE7XWwq
+MsvIcElHt1GkcayP
+ggFiRgLRkj7Vejc3
+Z3tuQmNJ28esuwcK
+YM0qVh2iso5XyxVZ
+gHJrKdqlKNLFbbYm
+AaItBShSi1gDyzIv
+xysJG7yMEZ2EkpbW
 */
