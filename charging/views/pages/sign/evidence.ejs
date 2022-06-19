@@ -1,0 +1,19 @@
+<%- include('../../partials/header') %>
+<%- include('../../partials/nav') %>
+
+<main>
+    <div class="container col-xxl-8 px-4 py-5">
+        <% if (isAuthenticated) { %>
+            <h1>Register</h1>
+            <p>Damit sie qualifizierte digitale unterschriften leisten können, bitten wir Sie, die Identifikationsdaten von Ihrer Bank zu übermitteln. <br/>
+            Clicken Sie weiter. </p>
+            <a href="/sign/register"><button type="button" class="btn btn-primary">weiter</button></a>
+
+        <% } else { %>
+            <h1>Please authenticate</h1>
+            <a href="/sign/idp">Login</a>
+            <% } %>
+    </div>
+</main>
+
+<%- include('../../partials/footer') %>

@@ -1,0 +1,21 @@
+<%- include('../../partials/header') %>
+<%- include('../../partials/nav') %>
+
+<main>
+    <div class="container col-xxl-8 px-4 py-5">
+        <% if (isAuthenticated) { %>
+            <h1>Authenticated</h1>
+            <ul>
+                <li>Name: <%= user.name %></li>
+                <li>iss: <%= user.iss %></li>
+                <li>sub: <%= user.sub %></li>
+            </ul>
+
+        <% } else { %>
+            <h1>Please authenticate</h1>
+            <a href="/sign/idp">Login</a>
+            <% } %>
+    </div>
+</main>
+
+<%- include('../../partials/footer') %>

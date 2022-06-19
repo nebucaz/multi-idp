@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { Issuer, generators, TokenSet } from 'openid-client';
-import { RequestContext } from '../helpers/RequestContext';
+//import { RequestContext } from '../helpers/RequestContext';
 
 // https://github.com/Belphemur/node-json-db
 import { JsonDB } from 'node-json-db';

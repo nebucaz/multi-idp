@@ -1,0 +1,18 @@
+<%- include('../../partials/header') %>
+<%- include('../../partials/nav') %>
+
+<main>
+    <div class="container col-xxl-8 px-4 py-5">
+        <% if (isAuthenticated) { %>
+            <h1>Confirm</h1>
+            <p>Mit Klick auf "jetzt signieren" unterschrieben Sie das nebenstehende Dokument rechtsgültig </p>
+            <a href="/sign/register"><button type="button" class="btn btn-primary">weiter</button></a>
+
+        <% } else { %>
+            <h1>Please authenticate</h1>
+            <a href="/sign/idp">Login</a>
+            <% } %>
+    </div>
+</main>
+
+<%- include('../../partials/footer') %>

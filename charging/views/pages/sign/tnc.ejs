@@ -1,0 +1,32 @@
+<%- include('../../partials/header') %>
+<%- include('../../partials/nav') %>
+
+<main>
+    <div class="container col-xxl-8 px-4 py-5">
+        <% if (isAuthenticated) { %>
+            <h1>Confirm Terms & Condtions</h1>
+
+            <form action="/sign/confirm" method="post">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Default checkbox
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Checked checkbox
+                    </label>
+                  </div>
+                <button type="submit" class="btn btn-primary">Jetzt bestätigen</button>
+            </form>
+
+        <% } else { %>
+            <h1>Please authenticate</h1>
+            <a href="/sign/idp">Login</a>
+            <% } %>
+    </div>
+</main>
+
+<%- include('../../partials/footer') %>
